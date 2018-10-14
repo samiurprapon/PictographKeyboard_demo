@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pallet_1_colour_1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/emojiKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/emojiKeyboardPagerSlidingTabStrip"
+            app:pstsTabPaddingLeftRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emojiKeyboardViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lennyFaceKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/lennyFaceKeyboardPagerSlidingTabStrip"
+            app:pstsTabPaddingLeftRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/lennyFaceKeyboardViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/bottom_button_bar_shape"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/switchToKeyboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_weight="0.1429"
+            android:src="@drawable/key_icon_keyboard" />
+
+        <ImageButton
+            android:id="@+id/openSettingsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_weight="0.1429"
+            android:src="@drawable/key_icon_settings" />
+
+        <ImageButton
+            android:id="@+id/toggleLennyFacesAndEmojiKeyboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_weight="0.1429"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.142"/>
+
+        <ImageButton
+            android:id="@+id/spaceBarButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_weight="0.1429"
+            android:src="@drawable/key_icon_space_bar" />
+
+        <ImageButton
+            android:id="@+id/enterButton"
+            android:src="@drawable/key_icon_enter_key"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_width="0dp"
+            android:layout_weight="0.1429"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/emoji_button_selector"
+            android:layout_weight="0.1429"
+            android:src="@drawable/key_icon_backspace" />
+
+    </LinearLayout>
+
+</LinearLayout>
