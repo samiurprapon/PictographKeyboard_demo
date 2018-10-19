@@ -4,7 +4,6 @@ import android.content.res.Resources;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +33,7 @@ public class Utility {
             inputStream = resources.openRawResource(resources.getIdentifier("raw/emoji", "raw", packageName));
             EmojiJSONReader emojiJSONReader = new EmojiJSONReader(inputStream);
             emojiData = emojiJSONReader.loadEmojiData();
-        } catch (UnsupportedEncodingException exception) {
-            exception.printStackTrace();
-        } catch(Exception exception){
+        } catch(IOException exception){
             exception.printStackTrace();
         }
         finally {
@@ -54,8 +51,8 @@ public class Utility {
 
     public static final <T> List<T> initArrayList(T... elements) {
         List<T> list = new ArrayList<T>();
-        for (T element : elements)
-        {
+
+        for (T element : elements) {
             list.add(element);
         }
         return list;
